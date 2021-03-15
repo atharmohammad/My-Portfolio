@@ -1,13 +1,14 @@
 import './App.css';
 import {BrowserRouter,Route} from 'react-router-dom';
 import Start from './Components/Start/Start'
-import Resume from './Components/Resume/Resume'
+import Portfolio from './Container/Portfolio/Portfolio'
+
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Route exact path='/' component={Start}/>
-        <Route exact path='/resume' component={Resume}/>
+        <Route exact path='/portfolio' component={Portfolio}/>
       </div>
     </BrowserRouter>
   );

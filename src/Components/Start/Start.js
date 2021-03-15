@@ -26,7 +26,7 @@ export default function Start() {
   const classes = useStyles();
   const history = useHistory();
   const resumeHandler = ()=>{
-      history.push('/resume')
+      history.push('/portfolio')
   }
   return (
     <Grid container spacing={0} direction="column" alignItems="center" justify="center" style={{ minHeight: '100vh' }}>

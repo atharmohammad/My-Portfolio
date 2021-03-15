@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import MenuIcon from '@material-ui/icons/Menu';
 import {Button,Typography,Box,AppBar,Toolbar,IconButton} from '@material-ui/core'
 import {useHistory} from 'react-router-dom';
-import styles from './Resume.module.css'
+import styles from './About.module.css'
 const useStyles = makeStyles((theme) => ({
   img:{
     height:'40vh',
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default function Resume() {
+export default function About() {
   const classes = useStyles();
   const history = useHistory()
   return (
