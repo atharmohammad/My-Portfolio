@@ -1,0 +1,39 @@
+.Imgdiv{
+  --x : 200px;
+  -webkit-animation: fadein 1.5s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+		transform: translateX(var(--x));
+	}
+	100% {
+    opacity: 100;
+		transform: translateX(0px);
+	}
+}
+
+.textdiv{
+  --x : -200px;
+  -webkit-animation: fadein 1.5s;
+}
+
+.logo {
+  margin:2px
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 15s linear;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
