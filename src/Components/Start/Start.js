@@ -33,7 +33,7 @@ export default function Start() {
       <div className={styles.floating} onClick={resumeHandler}>
         <img src={Me} className={classes.img} />
       </div>
-      <Button variant="contained" color="secondary" onClick={resumeHandler}>Click on Image</Button>
+      <Button variant="contained" onClick={resumeHandler} style={{backgroundColor:"#9F6243",color:"#fff"}}>Click on Image</Button>
       <Typography className={classes.root} variant="h3" component="body1" >
         Hi , I am Mohd Athar
       </Typography>
