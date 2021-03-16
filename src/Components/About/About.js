@@ -11,6 +11,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import {Button,Typography,Box,AppBar,Toolbar,IconButton} from '@material-ui/core'
 import {useHistory} from 'react-router-dom';
 import styles from './About.module.css'
+import bounceStyle from '../Languages/LanguageChart/LanguageChart.module.css'
 const useStyles = makeStyles((theme) => ({
   img:{
     height:'40vh',
@@ -82,6 +83,14 @@ export default function About() {
           <img src={Me} className={classes.img} />
         </Grid>
       </Box>
+      <Typography style={{fontFamily: [
+        'Syne Mono',
+        'monospace',
+      ].join(',') , marginRight:'4vh'}}>Scroll down</Typography>
+      <Grid className={bounceStyle.bounce}>
+        <Grid className={styles.left}></Grid>
+        <Grid className={styles.right}></Grid>
+      </Grid>
     </Grid>
   );
 }
