@@ -39,6 +39,21 @@
 }
 
 
+.arrowDown{
+  width:60px;
+  height:40px;
+  margin:0 0 0 -30px;
+  position:absolute;
+  left:50%;
+  bottom:0px;
+  -webkit-animation: arrow 0.5s 1s infinite ease-out alternate;
+
+}
+
+.arrowDown:hover{
+   -webkit-animation-play-state: paused;
+}
+
 .left{
   position:absolute;
   height:10px;
@@ -68,7 +83,7 @@
 
 
 
-@-webkit-keyframes arrow{
+@keyframes arrow{
   0% {
     bottom:0px;
   }
@@ -78,7 +93,7 @@
 }
 
 
-@-webkit-keyframes leftArrow{
+@keyframes leftArrow{
   0% {
   }
   100%{
@@ -86,10 +101,22 @@
   }
 }
 
-@-webkit-keyframes rightArrow{
+@keyframes rightArrow{
   0% {
   }
   100%{
     -webkit-transform:rotate(-45deg);
   }
+}
+
+
+@keyframes zoomeffect{
+		0%{
+			background-position:center;
+		  transform:scale(1.5,1.5);
+		}
+		100%{
+			background-position:center;
+		  transform:scale(1,1);
+		}
 }

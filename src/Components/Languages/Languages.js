@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Chart from './LanguageChart/LanguageChart'
 import Webtexh from './WebTech/Webtech';
-
 const useStyles = makeStyles((theme) => ({
   img:{
     height:'40vh',

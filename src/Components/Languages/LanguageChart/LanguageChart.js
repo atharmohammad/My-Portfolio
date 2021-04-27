@@ -17,10 +17,59 @@ const useStyles = makeStyles((theme) => ({
       'Syne Mono',
       'monospace',
     ].join(','),
+    [theme.breakpoints.down('sm')]: {
+      fontSize:'15px'
+    },
 
   },
   box:{
-    marginTop:'10vh'
+    marginTop:'10vh',
+    [theme.breakpoints.down('sm')]: {
+      marginTop:'5vh',
+      width:'10vh'
+    },
+  },
+  head:{
+     minHeight: '90vh',
+     backgroundColor:'white',
+     marginLeft:'80px' ,
+    [theme.breakpoints.down('sm')]: {
+      margin:'0',
+      minHeight:'50vh'
+    },
+  },
+  skill:{
+    textAlign:'left',
+    fontFamily: ['Lobster','cursive',].join(','),
+    [theme.breakpoints.down('sm')]: {
+      fontSize:'20px'
+    },
+  },
+  Imgdiv:{
+    textAlign:'left',
+    [theme.breakpoints.down('sm')]: {
+      fontSize:'15px',
+      marginLeft:'0',
+      width:'20%'
+    },
+  },
+  Languages:{
+    marginTop:'4vh',
+    fontFamily: [
+      'Akaya Telivigala',
+      'cursive',
+    ].join(','),
+    fontSize:'7vh',
+    height:'12vh',
+    [theme.breakpoints.down('sm')]: {
+      fontSize:'4vh',
+    },
+  },
+  img:{
+    height:'10vh',
+    [theme.breakpoints.down('sm')]: {
+      height:'8vh',
+    },
   }
 
 }));
@@ -30,40 +79,29 @@ export default function Chart() {
 
     const classes = useStyles();
     return (
-    <Grid id="chart" container spacing={0} direction="column" spacing="1" style={{ minHeight: '90vh',backgroundColor:'white',marginLeft:'80px' }}>
-      <Typography variant='h2' style={{textAlign:'left',
-        fontFamily: [
-          'Pacifico',
-          'cursive',
-        ].join(','),}} className={entryStyle.textdiv}>
+    <Grid id="chart" container spacing={0} sm={12} md={12} direction="column" spacing="1" className={classes.head} >
+      <Typography variant='h2' className={`${entryStyle.textdiv} ${classes.skill}`}>
         Skills I have
       </Typography>
-      <Box container display="flex" flexWrap="nowrap">
         <Grid container direction="column" spacing="1" style={{width:'60%'}} className={entryStyle.textdiv}>
             <Box container display="flex" flexWrap="nowrap" className={classes.box}>
-              <img src={Cplus} alt="c++" style={{height:'10vh',}} className={bounceStyle.bounce2}/>
-              <Grid item style={{backgroundColor:'black',minHeight:'10vh',width:'80%',marginLeft:'40px'}}></Grid>
+              <img src={Cplus} alt="c++"  className={`${bounceStyle.bounce2} ${classes.img}`}/>
+              <Grid item style={{backgroundColor:'black',height:'5vh',width:'65%',margin:'2.4vh 0 0 6vh',borderRadius:'5px'}}></Grid>
               <Typography className={classes.typography}>85%</Typography>
             </Box>
             <Box container display="flex" flexWrap="nowrap" className={classes.box}>
-              <img src={Js} alt="Js" style={{height:'10vh',}} className={bounceStyle.bounce2} />
-              <Grid item style={{backgroundColor:'black',minHeight:'10vh',width:'70%',marginLeft:'40px'}}></Grid>
+              <img src={Js} alt="Js"  className={`${bounceStyle.bounce2} ${classes.img}`} />
+              <Grid item style={{backgroundColor:'black',height:'5vh',width:'58%',margin:'2.4vh 0 0 6vh',borderRadius:'5px'}}></Grid>
               <Typography className={classes.typography}>80%</Typography>
             </Box>
             <Box container display="flex" flexWrap="nowrap" className={classes.box}>
-              <img src={Python} alt="Python" style={{height:'10vh',}} className={bounceStyle.bounce2} />
-              <Grid item style={{backgroundColor:'black',minHeight:'10vh',width:'60%',marginLeft:'40px'}}></Grid>
+              <img src={Python} alt="Python" className={`${bounceStyle.bounce2} ${classes.img}`} />
+              <Grid item style={{backgroundColor:'black',height:'5vh',width:'50%',margin:'2.4vh 0 0 6vh',borderRadius:'5px'}}></Grid>
               <Typography className={classes.typography}>70%</Typography>
             </Box>
           </Grid>
 
-          <Box className={entryStyle.Imgdiv}>
-            <Typography style={{margin:"20vh 0 0 10vh",fontFamily: [
-              'Akaya Telivigala',
-              'cursive',
-            ].join(','),fontSize:'7vh',height:'12vh'}}>Languages I Use</Typography>
-          </Box>
-        </Box>
+
       </Grid>
     );
   }

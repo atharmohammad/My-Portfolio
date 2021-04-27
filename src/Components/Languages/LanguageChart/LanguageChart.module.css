@@ -19,4 +19,9 @@
   left:50%;
   bottom:0px;
   animation: bounce2 1s ease infinite;
+  animation-play-state: running;
+}
+
+.bounce:hover{
+  animation-play-state: paused;
 }
